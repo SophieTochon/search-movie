@@ -15,6 +15,7 @@ source 'https://rubygems.org'
   gem 'turbolinks'
   gem 'jbuilder'
   gem 'themoviedb'
+  gem 'dotenv-rails'
 
 
   group :development, :test do

@@ -11,7 +11,7 @@ class SearchMovie
   end
 
   def log_in_to_the_movie_database
-  	@client = Tmdb::Api.key("f954ddd1202b26325375d3ff28525f39")
+  	@client = Tmdb::Api.key(ENV['THE_MOVIE_DATABASE_API_KEY'])
   end
 
   def make_research

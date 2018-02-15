@@ -1,0 +1,8 @@
+<p>Page des résultats</p>
+
+<% if @results != nil %>
+  <% @results.each do |result| %>
+
+	<%= result["title"] %>
+  <% end %>
+<% end %>

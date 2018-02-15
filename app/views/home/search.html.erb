@@ -1,0 +1,24 @@
+<h1>BASIC MOVIE TITLE SEARCH</h1>
+
+
+<p>So, what are we looking for?</p>
+<%= form_tag(home_search_path, method: :post) do |f| %>
+
+  <%= text_field_tag :research_terms%>
+  <%= submit_tag "Go!" %>
+<% end %>
+
+</br>
+
+<% if @results == nil %>
+  <p><em>Please fill in the form and click on the "Go!" button so the result page is not <strong>broucouille</strong> (pardon my french) anymore.</em></p>
+  <% else %>
+  <% @results.first(20).each do |result| %>
+  <ul>
+  	<li><strong><%= result["title"] %></strong></br>
+  		Released date: <%= result["release_date"] %></br>
+  		<img src="https://image.tmdb.org/t/p/w500<%= "#{result["poster_path"]}" %>", width=100>
+  	</li>
+  </ul>
+  <% end %>
+<% end %>
