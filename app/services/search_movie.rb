@@ -1,5 +1,5 @@
 class SearchMovie
-	attr_accessor :research_terms, :search, :client
+	attr_accessor :research_terms, :client, :search
 
   def initialize(research_terms)
   	@research_terms = research_terms
